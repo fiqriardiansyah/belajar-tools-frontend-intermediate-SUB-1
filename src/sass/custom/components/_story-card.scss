@@ -1,0 +1,66 @@
+@use '../variables/color';
+@use '../helper/mixin';
+
+$repeat: 20;
+
+@for $i from 1 through $repeat {
+    $color: nth(color.$colors, random(length(color.$colors)));
+    .story-card:nth-child(#{length(color.$colors)}n+#{$i}) {
+        border-color: darken($color, 10%);
+        
+        &:hover, &:active, &:focus {
+            background-color: lighten($color, 5%);
+        }
+
+        .image {
+            background-color: $color !important;
+        }
+        .skeleton {
+            background-color: lighten($color, 5%);
+        }
+    }
+}
+
+.story-card {
+    display: block;
+    box-sizing: border-box;
+    padding: 0;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: .6rem;
+
+    .box {
+        text-decoration: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        padding: .3rem;
+
+        .image {
+            @include mixin.storyImage(100%, 40vh);
+        }
+
+        div {
+            margin-top: 1rem;
+            padding: .5rem;
+
+            small {
+                font-size: .8rem;
+            }
+        }
+    }
+
+    &-name {
+        @include mixin.storyName(darken(color.$primary, 60%), 1.4rem);
+    }
+
+    &-created-at {
+        @include mixin.storyDate();
+        margin: 0;
+    }
+
+    &-desc {
+        @include mixin.storyDesc(1rem);
+        color: color.$dark;
+    }
+}

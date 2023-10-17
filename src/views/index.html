@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title><%= htmlWebpackPlugin.options.title %> | Fiqri ardiansyah</title>
+  </head>
+  <body>
+    <nav-app canSearch="true" appName="<%= appName %>"></nav-app>
+    <main  class="container" style="min-height: 100vh;">
+      <ol class="breadcrumb" aria-label="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+      </ol>
+      <stories-home></stories-home>
+    </main>
+    <footer-app appName="<%= appName %>"></footer-app>
+  </body>
+</html>

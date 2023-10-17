@@ -1,0 +1,9 @@
+@use '../variables/color';
+
+.breadcrumb {
+    margin: 2rem 0;
+    width: 100%;
+    padding: .7rem 1.5rem;
+    background-color: color.$base;
+    border-radius: 5px;
+}

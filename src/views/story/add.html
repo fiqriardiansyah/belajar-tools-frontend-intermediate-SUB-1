@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title><%= htmlWebpackPlugin.options.title %> | Add New Story</title>
+  </head>
+  <body>
+    <nav-app appName="<%= appName %>"></nav-app>
+    <main class="container" style="min-height: 100vh;">
+        <ol class="breadcrumb" aria-label="breadcrumb">
+          <li class="breadcrumb-item"><a href="/">Home</a></li>
+          <li class="breadcrumb-item">Create new story</li>
+        </ol>
+        <form-add></form-add>
+    </main>
+    <footer-app appName="<%= appName %>"></footer-app>
+  </body>
+</html>

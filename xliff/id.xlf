@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+<file target-language="id" source-language="en" original="lit-localize-inputs" datatype="plaintext">
+<body>
+<trans-unit id="s7fee95b66225e1fb">
+  <source>Dashboard</source>
+  <target>Beranda</target>
+</trans-unit>
+<trans-unit id="s9a730edb8b4733e7">
+  <source>Create New</source>
+  <target>Buat Baru</target>
+</trans-unit>
+<trans-unit id="s6f4812aa4388b4b9">
+  <source>Made with ❤️ by fiqriardiansyah</source>
+  <target>Dibuat dengan ❤️ oleh fiqriardiansyah</target>
+</trans-unit>
+<trans-unit id="s3d099ab47fec57b6">
+  <source>Like</source>
+  <target>Suka</target>
+</trans-unit>
+<trans-unit id="s63f0bfacf2c00f6b">
+  <source>Hello</source>
+  <target>Halo</target>
+</trans-unit>
+<trans-unit id="s8a2c100e0490e7b5">
+  <source>Adios</source>
+  <target>Selamat tinggal</target>
+</trans-unit>
+<trans-unit id="se9c4aac892f59a70">
+  <source>About me</source>
+  <target>Tentang saya</target>
+</trans-unit>
+<trans-unit id="sdcc4c131e03049b4">
+  <source>Create Story</source>
+  <target>Buat Cerita</target>
+</trans-unit>
+<trans-unit id="s3007626a1c52b75c">
+  <source>Share to the world that you have a story in your life</source>
+  <target>bagikan kepada dunia bahwa kamu mempunyai cerita dalam hidupmu</target>
+</trans-unit>
+<trans-unit id="s4b6632f24dd9d9f6">
+  <source>Perhatian 📢</source>
+  <target>Perhatian 📢</target>
+</trans-unit>
+<trans-unit id="s8635e11850f551b5">
+  <source>You can enter photos that you want to share, but remember! This platform strictly prohibits content containing pornography, sarcasm and vandalism</source>
+  <target>Anda bisa memasukkan foto yang ingin Anda bagikan, tapi ingat! Platform ini melarang keras konten yang mengandung pornografi, sarkasme, dan vandalisme</target>
+</trans-unit>
+<trans-unit id="sd83ccf006fbb26be">
+  <source>Story Photo</source>
+  <target>Foto cerita</target>
+</trans-unit>
+<trans-unit id="s2813fd317055faac">
+  <source>Pick Photo</source>
+  <target>Pilih Foto</target>
+</trans-unit>
+<trans-unit id="s63d894b1ddb06289">
+  <source>Description</source>
+  <target>Deskripsi</target>
+</trans-unit>
+<trans-unit id="sae5d87e99fe081e0">
+  <source>Required</source>
+  <target>Wajib diisi</target>
+</trans-unit>
+<trans-unit id="sb3d4f79d9d8b71e5">
+  <source>Submit</source>
+  <target>Kirim</target>
+</trans-unit>
+<trans-unit id="sfa6203862fc4447c">
+  <source><x id="0" equiv-text="${this.story?.name}"/> Stories</source>
+  <target>Cerita <x id="0" equiv-text="${this.story?.name}"/></target>
+</trans-unit>
+<trans-unit id="s5d929ff1619ac0c9">
+  <source>Search</source>
+  <target>Cari</target>
+</trans-unit>
+</body>
+</file>
+</xliff>

@@ -1,0 +1,25 @@
+@use '../variables/color';
+
+$repeat: 20;
+
+@mixin storyImage($width, $height) {
+    width: $width;
+    height: $height;
+    border-radius: .6rem;
+    object-fit: cover;
+    background-color: color.$base;
+}
+
+@mixin storyName($color: color.$primary, $fontSize: 2rem) {
+    color: $color;
+    font-size: $fontSize;
+}
+
+@mixin storyDate($color: darken($color: color.$base, $amount: 50%)) {
+    font-size: .8rem;
+    color: $color;
+}
+
+@mixin storyDesc($fontSize: 1.4rem) {
+    font-size: $fontSize;
+}

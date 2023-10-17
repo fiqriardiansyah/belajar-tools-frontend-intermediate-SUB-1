@@ -1,0 +1,84 @@
+// ==================================================
+// Bootstrap
+// ==================================================
+
+// Menerapkan/override variables Bootstrap apa pun di sini
+@use '../custom/variables/color' as color;
+
+// Color
+$primary: color.$primary;
+$secondary: color.$secondary;
+$dark: color.$dark;
+$light: color.$light;
+
+
+//
+// Functions Bootstrap
+//
+@import '~bootstrap/scss/functions';
+
+//
+// Variables Bootstrap
+//
+@import '~bootstrap/scss/variables';
+
+$theme-colors: map-merge($map1: $theme-colors, $map2: (
+    "base": color.$base,
+));
+
+// Component Dropdown
+$dropdown-link-active-bg: color.$base;
+$dropdown-link-hover-bg: color.$base;
+$dropdown-link-active-color: color.$dark;
+$dropdown-link-hover-color: color.$primary;
+$dropdown-border-color: transparent;
+$dropdown-bg: color.$base;
+$dropdown-padding-x: .5rem;
+
+// Component Button
+$btn-border-radius: 100px;
+
+// Breadcrumb Component
+$breadcrumb-divider: quote("<");
+
+// Alert component 
+$alert-border-width: 5px;
+
+// Modal component
+$modal-header-border-color: transparent;
+//
+// Konfigurasi Bootstrap
+//
+@import '~bootstrap/scss/maps';
+@import '~bootstrap/scss/mixins';
+@import '~bootstrap/scss/root';
+@import '~bootstrap/scss/utilities';
+@import '~bootstrap/scss/reboot';
+
+//
+// Layouts dan components
+//
+@import '~bootstrap/scss/type';
+@import '~bootstrap/scss/images';
+@import '~bootstrap/scss/containers';
+@import '~bootstrap/scss/grid';
+
+@import '~bootstrap/scss/helpers';
+
+// Komponen-Komponen
+@import '~bootstrap/scss/forms';
+@import '~bootstrap/scss/modal';
+@import '~bootstrap/scss/buttons';
+@import '~bootstrap/scss/dropdown';
+@import '~bootstrap/scss/nav';
+@import '~bootstrap/scss/navbar';
+@import '~bootstrap/scss/breadcrumb';
+@import '~bootstrap/scss/alert';
+
+//
+// Utilities API untuk menghasilkan utility classes
+//
+@import '~bootstrap/scss/utilities/api';
+
+//
+// Tambahkan custom code di sini

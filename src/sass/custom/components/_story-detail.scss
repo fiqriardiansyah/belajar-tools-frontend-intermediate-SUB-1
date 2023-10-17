@@ -1,0 +1,23 @@
+@use '../helper/mixin';
+@use '../variables/color';
+
+.story-detail {
+    display: flex;
+
+    &-image {
+        @include mixin.storyImage(100%, 70vh);
+    }
+
+    &-name {
+        @include mixin.storyName();
+    }
+
+    &-created-at {  
+        @include mixin.storyDate();
+    }
+
+    &-desc {
+        @include mixin.storyDesc();
+    }
+
+}

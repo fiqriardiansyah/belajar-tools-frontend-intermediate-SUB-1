@@ -1,0 +1,33 @@
+@use '../variables/color';
+
+.input-image-with-preview {
+
+    $randomColor: nth(color.$colors, random(length(color.$colors)));
+
+    width: 100%;
+    height: 50vh;
+    background-color: color.$base;
+    border-radius: .5rem;
+    border: 1px solid rgb(182, 182, 182);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .5rem;
+
+    .icon-image {
+        font-size: 5rem;
+        color: $randomColor;
+    }
+
+    input {
+        width: 0;
+        height: 0;
+        pointer-events: none;
+        opacity: 0;
+    }
+
+    &.error {
+        border: 1px solid red;
+    }
+}
