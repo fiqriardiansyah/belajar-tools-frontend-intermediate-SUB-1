@@ -26,10 +26,6 @@
   <source>Adios</source>
   <target>الوداع</target>
 </trans-unit>
-<trans-unit id="se9c4aac892f59a70">
-  <source>About me</source>
-  <target>ْعَنِّي</target>
-</trans-unit>
 <trans-unit id="sdcc4c131e03049b4">
   <source>Create Story</source>
   <target>إنشاء قصة</target>
@@ -37,10 +33,6 @@
 <trans-unit id="s3007626a1c52b75c">
   <source>Share to the world that you have a story in your life</source>
   <target>شارك للعالم أن لديك قصة في حياتك</target>
-</trans-unit>
-<trans-unit id="s4b6632f24dd9d9f6">
-  <source>Attention 📢</source>
-  <target>بيرهاتيان 📢</target>
 </trans-unit>
 <trans-unit id="s8635e11850f551b5">
   <source>You can enter photos that you want to share, but remember! This platform strictly prohibits content containing pornography, sarcasm and vandalism</source>
@@ -66,13 +58,45 @@
   <source>Submit</source>
   <target>يُقدِّم</target>
 </trans-unit>
-<trans-unit id="sfa6203862fc4447c">
-  <source><x id="0" equiv-text="${this.story?.name}"/> Stories</source>
-  <target>قصص <x id="0" equiv-text="${this.story?.name}"/></target>
-</trans-unit>
 <trans-unit id="s5d929ff1619ac0c9">
   <source>Search</source>
   <target>يبحث</target>
+</trans-unit>
+<trans-unit id="s67749057edb2586b">
+  <source>Logout</source>
+  <target>تسجيل خروج</target>
+</trans-unit>
+<trans-unit id="s6342b96a82118650">
+  <source>Attention 📢</source>
+  <target>انتبه📢</target>
+</trans-unit>
+<trans-unit id="sb59d68ed12d46377">
+  <source>Loading</source>
+  <target>تحميل</target>
+</trans-unit>
+<trans-unit id="s2c15b9b13a3e2a80">
+  <source>Register</source>
+  <target>يسجل</target>
+</trans-unit>
+<trans-unit id="s205b3e04ad286caa">
+  <source>Already have an account?</source>
+  <target>هل لديك حساب؟</target>
+</trans-unit>
+<trans-unit id="sf6075e29d25fa2fb">
+  <source>Login here!</source>
+  <target>تسجيل الدخول هنا!</target>
+</trans-unit>
+<trans-unit id="sc8da3cc71de63832">
+  <source>Login</source>
+  <target>تسجيل الدخول</target>
+</trans-unit>
+<trans-unit id="sdb314e7e0f343d2d">
+  <source>Dont have an account?</source>
+  <target>ليس لديك حساب؟</target>
+</trans-unit>
+<trans-unit id="sfa698c099321b674">
+  <source>Sign up here!</source>
+  <target>سجل هنا!</target>
 </trans-unit>
 </body>
 </file>

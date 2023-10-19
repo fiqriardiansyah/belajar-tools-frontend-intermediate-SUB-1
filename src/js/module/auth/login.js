@@ -70,7 +70,7 @@ class LoginForm extends LitWithoutShadowDom {
       <form novalidate @submit=${this.onSubmit} class="${this.class}" style="width: 350px;">
         <div class="col-12">
           <label for="validationemail" class="form-label">Email</label>
-          <input-with-validation type="email" name="email" inputId="validationemail" invalidFeedbackMessage="${msg("Wajib diisi")}" required></input-with-validation>
+          <input-with-validation type="email" name="email" inputId="validationemail" invalidFeedbackMessage="${msg("Required")}" required></input-with-validation>
         </div>
         <div class="col-12">
           <label for="validationpassword" class="form-label">Password</label>
@@ -80,7 +80,7 @@ class LoginForm extends LitWithoutShadowDom {
             fixedType="password"
             minlength="${MIN_CHAR_PASSWORD}"
             inputId="validationpassword"
-            invalidFeedbackMessage="${msg("Wajib diisi")}"
+            invalidFeedbackMessage="${msg("Required")}"
             required
           ></input-with-validation>
         </div>
