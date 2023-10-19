@@ -31,9 +31,7 @@ class FooterAppp extends LitElement {
 
   _checkAvailabilityProperty() {
     if (!this.hasAttribute("appName")) {
-      throw new Error(
-        `Atribut "appName" harus diterapkan pada elemen ${this.localName}`
-      );
+      throw new Error(`Atribut "appName" harus diterapkan pada elemen ${this.localName}`);
     }
   }
 

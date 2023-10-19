@@ -17,14 +17,7 @@ class NavLink extends LitWithoutShadowDom {
   render() {
     return html`
       <li class="nav-item">
-        <a
-          href="${this.to}"
-          class="nav-link ${this.class} ${this.currentPath === this.to
-            ? "active"
-            : ""}"
-        >
-          ${this.content}
-        </a>
+        <a href="${this.to}" class="nav-link ${this.class} ${this.currentPath === this.to ? "active" : ""}"> ${this.content} </a>
       </li>
     `;
   }

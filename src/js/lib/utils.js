@@ -17,13 +17,7 @@ export const getQueryParam = (param) => {
   return urlParams.get(param);
 };
 
-export const getStories = async () => {
-  const stories = await new Promise(async (resolve) => {
-    const fetchStories = await fetch("/data/data.json");
-    const res = await fetchStories.json();
-    setTimeout(() => {
-      resolve(res.listStory);
-    }, 1000);
-  });
-  return stories;
-};
+export const TOKEN = "token";
+export const NAME = "name";
+
+export const MIN_CHAR_PASSWORD = 8;

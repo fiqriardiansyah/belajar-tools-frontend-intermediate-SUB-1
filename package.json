@@ -20,8 +20,14 @@
     "clean-webpack-plugin": "4.0.0",
     "copy-webpack-plugin": "11.0.0",
     "css-loader": "6.7.2",
+    "eslint": "^8.51.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-prettier": "^5.0.1",
     "html-webpack-plugin": "5.5.0",
     "postcss-loader": "7.0.1",
+    "prettier": "^3.0.3",
     "sass": "1.56.1",
     "sass-loader": "13.2.0",
     "style-loader": "3.3.1",
@@ -33,9 +39,12 @@
   "dependencies": {
     "@lit/localize": "^0.12.0",
     "@popperjs/core": "2.11.6",
+    "axios": "^1.5.1",
     "bootstrap": "5.2.2",
     "bootstrap-icons": "^1.11.1",
     "dayjs": "^1.11.10",
+    "firebase": "^10.5.0",
+    "js-cookie": "^3.0.5",
     "lit": "^2.8.0"
   }
 }

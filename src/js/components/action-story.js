@@ -57,27 +57,15 @@ class ActionStory extends LitElement {
   render() {
     return html`
       <div class="action-container">
-        <button
-          @click=${this.onClickLike}
-          class="action-item"
-          title="${msg("Like")}"
-        >
+        <button @click=${this.onClickLike} class="action-item" title="${msg("Like")}">
           <span class="action-icon">❤️</span>
           <span class="action-total">${this.like}</span>
         </button>
-        <button
-          @click=${this.onClickHello}
-          class="action-item"
-          title="${msg("Hello")}"
-        >
+        <button @click=${this.onClickHello} class="action-item" title="${msg("Hello")}">
           <span class="action-icon">👋</span>
           <span class="action-total">${this.hello}</span>
         </button>
-        <button
-          @click=${this.onClickAdios}
-          class="action-item"
-          title="${msg("Adios")}"
-        >
+        <button @click=${this.onClickAdios} class="action-item" title="${msg("Adios")}">
           <span class="action-icon">🤌</span>
           <span class="action-total">${this.adios}</span>
         </button>

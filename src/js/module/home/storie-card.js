@@ -1,6 +1,6 @@
 import LitWithoutShadowDom from "../../components/base/lit-without-shadowdom";
 import { html } from "lit";
-import { formatDate } from "../../utils";
+import { formatDate } from "../../lib/utils";
 
 class StorieCard extends LitWithoutShadowDom {
   static properties = {
@@ -16,25 +16,17 @@ class StorieCard extends LitWithoutShadowDom {
 
   _checkAvailabilityProperty() {
     if (!this.story) {
-      throw new Error(
-        `Atribut "story" harus diterapkan pada elemen ${this.localName}`
-      );
+      throw new Error(`Atribut "story" harus diterapkan pada elemen ${this.localName}`);
     }
   }
 
   _card() {
     this._checkAvailabilityProperty();
     return html` <a href="/story/detail.html?id=${this.story?.id}" class="box">
-      <img
-        src="${this.story?.photoUrl}"
-        alt="${this.story?.name}"
-        class="image"
-      />
+      <img src="${this.story?.photoUrl}" alt="${this.story?.name}" class="image" />
       <div class="">
         <h5 class="story-card-name">${this.story?.name}</h5>
-        <small class="story-card-created-at"
-          >${formatDate(this.story?.createdAt)}</small
-        >
+        <small class="story-card-created-at">${formatDate(this.story?.createdAt)}</small>
         <p class="story-card-desc">${this.story?.description}</p>
       </div></a
     >`;

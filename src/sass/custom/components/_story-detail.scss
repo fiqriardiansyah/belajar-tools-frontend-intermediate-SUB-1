@@ -5,7 +5,7 @@
     display: flex;
 
     &-image {
-        @include mixin.storyImage(100%, 70vh);
+        @include mixin.storyImage(100%, 100%);
     }
 
     &-name {

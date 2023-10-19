@@ -24,9 +24,7 @@ class TextareaWithValidation extends LitWithoutShadowDom {
 
   _checkAvailabilityProperty() {
     if (!this.hasAttribute("name")) {
-      throw new Error(
-        `Atribut "name" harus diterapkan pada elemen ${this.localName}`
-      );
+      throw new Error(`Atribut "name" harus diterapkan pada elemen ${this.localName}`);
     }
   }
 
@@ -48,9 +46,7 @@ class TextareaWithValidation extends LitWithoutShadowDom {
 
   _validFeedbackTemplate() {
     if (this.validFeedbackMessage) {
-      return html`
-        <div class="valid-feedback">${this.validFeedbackMessage}</div>
-      `;
+      return html` <div class="valid-feedback">${this.validFeedbackMessage}</div> `;
     }
 
     return html``;

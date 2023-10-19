@@ -12,6 +12,7 @@ class InputImageWithPreview extends LitWithoutShadowDom {
     required: { type: Boolean, reflect: true },
     class: { type: Boolean, reflect: true },
     imageBase64: { type: String, reflect: true },
+    file: { type: Object, reflect: true },
     wasValidated: { type: String, reflect: true },
   };
 
@@ -26,37 +27,16 @@ class InputImageWithPreview extends LitWithoutShadowDom {
 
   _checkAvailabilityProperty() {
     if (!this.hasAttribute("name")) {
-      throw new Error(
-        `Atribut "name" harus diterapkan pada elemen ${this.localName}`
-      );
+      throw new Error(`Atribut "name" harus diterapkan pada elemen ${this.localName}`);
     }
   }
 
   render() {
     return html`
-      <div
-        class="input-image-with-preview ${this.class} ${this.wasValidated &&
-        !this.imageBase64
-          ? "error"
-          : ""}"
-        @click=${this._pickPhoto}
-      >
-        <i
-          class="bi bi-image icon-image ${this.imageBase64 ? "d-none" : ""}"
-        ></i>
-        <img
-          class="image"
-          src="${this.imageBase64}"
-          class="${this.imageBase64 ? "w-100 h-100 rounded" : ""}"
-          style="object-fit: cover"
-        />
-        <input
-          type="file"
-          name=${this.name}
-          id=${this.inputId || nothing}
-          accept="image/*"
-          @change=${this._updatePhotoPreview}
-        />
+      <div class="input-image-with-preview ${this.class} ${this.wasValidated && !this.imageBase64 ? "error" : ""}" @click=${this._pickPhoto}>
+        <i class="bi bi-image icon-image ${this.imageBase64 ? "d-none" : ""}"></i>
+        <img class="image" src="${this.imageBase64}" class="${this.imageBase64 ? "w-100 h-100 rounded" : ""}" style="object-fit: cover" />
+        <input type="file" name=${this.name} id=${this.inputId || nothing} accept="image/*" @change=${this._updatePhotoPreview} />
       </div>
       ${this._feedbackTemplate()}
     `;
@@ -70,6 +50,8 @@ class InputImageWithPreview extends LitWithoutShadowDom {
   _updatePhotoPreview(e) {
     const file = e.target?.files[0];
     if (!file) return;
+    this.file = file;
+
     const reader = new FileReader();
     reader.readAsDataURL(file);
     reader.onload = (event) => {
@@ -84,14 +66,7 @@ class InputImageWithPreview extends LitWithoutShadowDom {
     let invalidFeedbackTemplate = "";
 
     if (this.invalidFeedbackMessage) {
-      invalidFeedbackTemplate = html`
-        <div
-          class="invalid-feedback"
-          style="display: ${this.wasValidated ? "block" : "none"}"
-        >
-          ${this.invalidFeedbackMessage}
-        </div>
-      `;
+      invalidFeedbackTemplate = html` <div class="invalid-feedback" style="display: ${this.wasValidated ? "block" : "none"}">${this.invalidFeedbackMessage}</div> `;
     }
 
     return html`${invalidFeedbackTemplate}`;

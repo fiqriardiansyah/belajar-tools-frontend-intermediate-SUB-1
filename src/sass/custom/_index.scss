@@ -5,10 +5,12 @@
 @use './components/story-detail';
 @use './components/stories';
 @use './components/input-image-with-preview';
-@use './components/user-profile';
 @use './components/breadcrumb';
 // variables
 @use './variables/color';
+
+//page
+@use './page/auth';
 
 button {
     background-color: transparent;

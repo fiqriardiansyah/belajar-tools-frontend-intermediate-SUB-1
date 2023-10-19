@@ -1,12 +1,8 @@
 import { html } from "lit";
 import { allLocales } from "../../generated/locale-codes.js";
-import {
-  getLocale,
-  localeNames,
-  setLocaleFromUrl,
-} from "../../../localization.js";
+import { getLocale, localeNames, setLocaleFromUrl } from "../../../localization.js";
 import LitWithoutShadowDom from "./base/lit-without-shadowdom.js";
-import { getQueryParam } from "../utils.js";
+import { getQueryParam } from "../lib/utils.js";
 
 class LocalePicker extends LitWithoutShadowDom {
   static properties = {
@@ -22,18 +18,9 @@ class LocalePicker extends LitWithoutShadowDom {
 
   render() {
     return html`
-      <select
-        class="form-select"
-        aria-label="Default select example"
-        id="locale-picker-select"
-        @change=${this._localeChanged}
-      >
+      <select class="form-select" aria-label="Default select example" id="locale-picker-select" @change=${this._localeChanged}>
         ${allLocales.map((locale) => {
-          return html`
-            <option value=${locale} ?selected=${locale === this.currLocale}>
-              ${localeNames[locale]}
-            </option>
-          `;
+          return html` <option value=${locale} ?selected=${locale === this.currLocale}>${localeNames[locale]}</option> `;
         })}
       </select>
     `;

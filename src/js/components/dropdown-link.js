@@ -9,23 +9,10 @@ class DropdownLink extends LitWithoutShadowDom {
 
   constructor() {
     super();
-    this._checkAvailabilityProperty();
-  }
-
-  _checkAvailabilityProperty() {
-    if (!this.hasAttribute("to") || !this.hasAttribute("content")) {
-      throw new Error(
-        `Atribut "to" dan "content" harus diterapkan pada elemen ${this.localName}`
-      );
-    }
   }
 
   render() {
-    return html`
-      <a href="${this.to}" class="dropdown-item flex align-items-center">
-        ${this.content}
-      </a>
-    `;
+    return html` <a href="${this.to}" class="dropdown-item flex align-items-center"> ${this.content} </a> `;
   }
 }
 
