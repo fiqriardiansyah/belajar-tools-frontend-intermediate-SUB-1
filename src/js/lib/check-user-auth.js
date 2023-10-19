@@ -25,7 +25,7 @@ const CheckUserAuth = {
   },
 
   _isUserOnAuthPage(pages) {
-    const filteredPages = pages.filter((item) => window.location.pathname.endsWith(item));
+    const filteredPages = pages.filter((item) => window.location.pathname.includes(item));
     return Boolean(filteredPages.length);
   },
 };
